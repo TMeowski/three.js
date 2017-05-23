@@ -41,13 +41,11 @@
 		<script src="js/Detector.js"></script>
 
 		<script src="js/shaders/CopyShader.js"></script>
-    <script src="js/postprocessing/EffectComposer.js"></script>
-    <script src="js/postprocessing/MaskPass.js"></script>
-		<script src="js/shaders/CopyShader.js"></script>
+		<script src="js/shaders/FXAAShader.js"></script>
+		<script src="js/postprocessing/EffectComposer.js"></script>
 		<script src="js/postprocessing/RenderPass.js"></script>
     <script src="js/postprocessing/ShaderPass.js"></script>
 		<script src="js/postprocessing/OutlinePass.js"></script>
-		<script src="js/shaders/FXAAShader.js"></script>
 		<script src="js/libs/stats.min.js"></script>
 		<script src='js/libs/dat.gui.min.js'></script>
 
@@ -285,7 +283,7 @@
 				// postprocessing
 				composer = new THREE.EffectComposer( renderer );
 
-				renderPass = new THREE.RenderPass( scene, camera );
+				var renderPass = new THREE.RenderPass( scene, camera );
 				composer.addPass( renderPass );
 
 				outlinePass = new THREE.OutlinePass( new THREE.Vector2(window.innerWidth, window.innerHeight), scene, camera);
@@ -336,6 +334,8 @@
 				window.addEventListener( 'touchmove', onTouchMove );
 
 				function onTouchMove( event ) {
+
+					var x, y;
 
 					if ( event.changedTouches ) {
 

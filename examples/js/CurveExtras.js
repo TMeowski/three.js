@@ -15,7 +15,11 @@
 
 	// GrannyKnot
 
-	function GrannyKnot() {}
+	function GrannyKnot() {
+
+		THREE.Curve.call( this );
+
+	}
 
 	GrannyKnot.prototype = Object.create( THREE.Curve.prototype );
 	GrannyKnot.prototype.constructor = GrannyKnot;
@@ -36,6 +40,8 @@
 
 	function HeartCurve( s ) {
 
+		THREE.Curve.call( this );
+
 		this.scale = ( s === undefined ) ? 5 : s;
 
 	}
@@ -53,11 +59,13 @@
 
 		return new THREE.Vector3( x, y, z ).multiplyScalar( this.scale );
 
-	}
+	};
 
 	// Viviani's Curve
 
 	function VivianiCurve( radius ) {
+
+		THREE.Curve.call( this );
 
 		this.radius = radius;
 
@@ -81,7 +89,11 @@
 
 	// KnotCurve
 
-	function KnotCurve() {}
+	function KnotCurve() {
+
+		THREE.Curve.call( this );
+
+	}
 
 	KnotCurve.prototype = Object.create( THREE.Curve.prototype );
 	KnotCurve.prototype.constructor = KnotCurve;
@@ -103,7 +115,11 @@
 
 	// HelixCurve
 
-	function HelixCurve() {}
+	function HelixCurve() {
+
+		THREE.Curve.call( this );
+
+	}
 
 	HelixCurve.prototype = Object.create( THREE.Curve.prototype );
 	HelixCurve.prototype.constructor = HelixCurve;
@@ -127,9 +143,11 @@
 
 	function TrefoilKnot( s ) {
 
+		THREE.Curve.call( this );
+
 		this.scale = ( s === undefined ) ? 10 : s;
 
-	};
+	}
 
 	TrefoilKnot.prototype = Object.create( THREE.Curve.prototype );
 	TrefoilKnot.prototype.constructor = TrefoilKnot;
@@ -150,9 +168,11 @@
 
 	function TorusKnot( s ) {
 
+		THREE.Curve.call( this );
+
 		this.scale = ( s === undefined ) ? 10 : s;
 
-	};
+	}
 
 	TorusKnot.prototype = Object.create( THREE.Curve.prototype );
 	TorusKnot.prototype.constructor = TorusKnot;
@@ -176,9 +196,11 @@
 
 	function CinquefoilKnot( s ) {
 
+		THREE.Curve.call( this );
+
 		this.scale = ( s === undefined ) ? 10 : s;
 
-	};
+	}
 
 	CinquefoilKnot.prototype = Object.create( THREE.Curve.prototype );
 	CinquefoilKnot.prototype.constructor = CinquefoilKnot;
@@ -202,9 +224,11 @@
 
 	function TrefoilPolynomialKnot( s ) {
 
+		THREE.Curve.call( this );
+
 		this.scale = ( s === undefined ) ? 10 : s;
 
-	};
+	}
 
 	TrefoilPolynomialKnot.prototype = Object.create( THREE.Curve.prototype );
 	TrefoilPolynomialKnot.prototype.constructor = TrefoilPolynomialKnot;
@@ -232,9 +256,11 @@
 
 	function FigureEightPolynomialKnot( s ) {
 
+		THREE.Curve.call( this );
+
 		this.scale = ( s === undefined ) ? 1 : s;
 
-	};
+	}
 
 	FigureEightPolynomialKnot.prototype = Object.create( THREE.Curve.prototype );
 	FigureEightPolynomialKnot.prototype.constructor = FigureEightPolynomialKnot;
@@ -255,9 +281,11 @@
 
 	function DecoratedTorusKnot4a( s ) {
 
+		THREE.Curve.call( this );
+
 		this.scale = ( s === undefined ) ? 40 : s;
 
-	};
+	}
 
 	DecoratedTorusKnot4a.prototype = Object.create( THREE.Curve.prototype );
 	DecoratedTorusKnot4a.prototype.constructor = DecoratedTorusKnot4a;
@@ -278,9 +306,11 @@
 
 	function DecoratedTorusKnot4b( s ) {
 
+		THREE.Curve.call( this );
+
 		this.scale = ( s === undefined ) ? 40 : s;
 
-	};
+	}
 
 	DecoratedTorusKnot4b.prototype = Object.create( THREE.Curve.prototype );
 	DecoratedTorusKnot4b.prototype.constructor = DecoratedTorusKnot4b;
@@ -301,9 +331,11 @@
 
 	function DecoratedTorusKnot5a( s ) {
 
+		THREE.Curve.call( this );
+
 		this.scale = ( s === undefined ) ? 40 : s;
 
-	};
+	}
 
 	DecoratedTorusKnot5a.prototype = Object.create( THREE.Curve.prototype );
 	DecoratedTorusKnot5a.prototype.constructor = DecoratedTorusKnot5a;
@@ -324,9 +356,11 @@
 
 	function DecoratedTorusKnot5c( s ) {
 
+		THREE.Curve.call( this );
+
 		this.scale = ( s === undefined ) ? 40 : s;
 
-	};
+	}
 
 	DecoratedTorusKnot5c.prototype = Object.create( THREE.Curve.prototype );
 	DecoratedTorusKnot5c.prototype.constructor = DecoratedTorusKnot5c;
