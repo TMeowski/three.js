@@ -1076,7 +1076,6 @@
 
 		toJSON: function ( meta ) {
 
-			
 			if ( meta.textures[ this.uuid ] !== undefined ) {
 
 				return meta.textures[ this.uuid ];
