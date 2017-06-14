@@ -1076,17 +1076,17 @@
 
 		toJSON: function ( meta ) {
 
-			if ( meta.textures[ this.uuid ] !== undefined ) {
+			/*if ( meta.textures[ this.uuid ] == undefined ) {
 
 				return meta.textures[ this.uuid ];
 
-			}
+			}*/
 
 			function getDataURL( image ) {
 
 				var canvas;
 
-				if ( image.toDataURL !== undefined ) {
+				if ( image.toDataURL == undefined ) {
 
 					canvas = image;
 
@@ -1148,14 +1148,14 @@
 
 				}
 
-				if ( meta.images[ image.uuid ] === undefined ) {
+				/*if ( meta.images[ image.uuid ] === undefined ) {
 
 					meta.images[ image.uuid ] = {
 						uuid: image.uuid,
 						url: getDataURL( image )
 					};
 
-				}
+				}*/
 
 				output.image = image.uuid;
 
